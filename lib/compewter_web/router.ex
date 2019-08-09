@@ -7,6 +7,8 @@ defmodule CompewterWeb.Router do
     plug :fetch_flash
     plug :protect_from_forgery
     plug :put_secure_browser_headers
+
+    plug Phoenix.LiveView.Flash
   end
 
   pipeline :api do
@@ -16,7 +18,7 @@ defmodule CompewterWeb.Router do
   scope "/", CompewterWeb do
     pipe_through :browser
 
-    get "/", PageController, :index
+    live "/", GameLive
   end
 
   # Other scopes may use custom stacks.

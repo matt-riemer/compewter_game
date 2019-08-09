@@ -24,14 +24,14 @@ defmodule CompewterWeb do
       import Plug.Conn
       import CompewterWeb.Gettext
       alias CompewterWeb.Router.Helpers, as: Routes
+
+      import Phoenix.LiveView.Controller, only: [live_render: 3]
     end
   end
 
   def view do
     quote do
-      use Phoenix.View,
-        root: "lib/compewter_web/templates",
-        namespace: CompewterWeb
+      use Phoenix.View, root: "lib/compewter_web/templates", namespace: CompewterWeb
 
       # Import convenience functions from controllers
       import Phoenix.Controller, only: [get_flash: 1, get_flash: 2, view_module: 1]
@@ -42,6 +42,8 @@ defmodule CompewterWeb do
       import CompewterWeb.ErrorHelpers
       import CompewterWeb.Gettext
       alias CompewterWeb.Router.Helpers, as: Routes
+
+      import Phoenix.LiveView, only: [live_render: 2, live_render: 3, live_link: 1, live_link: 2]
     end
   end
 
@@ -50,6 +52,8 @@ defmodule CompewterWeb do
       use Phoenix.Router
       import Plug.Conn
       import Phoenix.Controller
+
+      import Phoenix.LiveView.Router
     end
   end
 

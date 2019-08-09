@@ -58,10 +58,11 @@ config :compewter, CompewterWeb.Endpoint,
 config :compewter, CompewterWeb.Endpoint,
   live_reload: [
     patterns: [
-      ~r"priv/static/.*(js|css|png|jpeg|jpg|gif|svg)$",
+      ~r"priv/static/.*(js|css|png|jpeg|jpg|gif|svg)$", 
       ~r"priv/gettext/.*(po)$",
       ~r"lib/compewter_web/{live,views}/.*(ex)$",
-      ~r"lib/compewter_web/templates/.*(eex)$"
+      ~r"lib/compewter_web/templates/.*(eex)$",
+      ~r"{lib/my_app_web/live/.*(ex)$}"
     ]
   ]
 

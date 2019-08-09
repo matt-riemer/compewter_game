@@ -1,5 +1,11 @@
 # Compewter
 
+Your new favorite com**pew**ter game.
+
+Pew pew.
+
+## Getting Started
+
 To start your Phoenix server:
 
   * Install dependencies with `mix deps.get`

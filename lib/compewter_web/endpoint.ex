@@ -1,9 +1,9 @@
 defmodule CompewterWeb.Endpoint do
   use Phoenix.Endpoint, otp_app: :compewter
 
-  socket "/socket", CompewterWeb.UserSocket,
-    websocket: true,
-    longpoll: false
+  socket "/socket", CompewterWeb.UserSocket, websocket: true, longpoll: false
+
+  socket "/live", Phoenix.LiveView.Socket
 
   # Serve at "/" the static files from "priv/static" directory.
   #

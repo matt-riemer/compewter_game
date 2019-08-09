@@ -15,7 +15,8 @@ config :compewter, CompewterWeb.Endpoint,
   url: [host: "localhost"],
   secret_key_base: "pdt+khfIZibd4KF1jGp+htYT/u+pw9k8A5WE5A04Wfpi9O4jD9+VTiqB4mqQygQN",
   render_errors: [view: CompewterWeb.ErrorView, accepts: ~w(html json)],
-  pubsub: [name: Compewter.PubSub, adapter: Phoenix.PubSub.PG2]
+  pubsub: [name: Compewter.PubSub, adapter: Phoenix.PubSub.PG2],
+  live_view: [signing_salt: "9qFk/MPDU6svgCgRBg2scB0SGQ6jgR2O"]
 
 # Configures Elixir's Logger
 config :logger, :console,
