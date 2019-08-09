@@ -44,6 +44,8 @@ defmodule CompewterWeb do
       alias CompewterWeb.Router.Helpers, as: Routes
 
       import Phoenix.LiveView, only: [live_render: 2, live_render: 3, live_link: 1, live_link: 2]
+
+      import CompewterWeb.BootstrapHelper
     end
   end
 

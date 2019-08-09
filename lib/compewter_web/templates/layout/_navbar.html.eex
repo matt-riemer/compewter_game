@@ -1,0 +1,18 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="/">
+    <img alt="Logo" src="<%= Routes.static_path(@conn, "/images/logo.png") %>" class="mb-2">
+    Compewter Game
+  </a>
+
+  <button class="navbar-toggler" data-aria-controls="navContent" data-aria-label="Toggle navigation"
+    data-target="#navContent" data-toggle="collapse" type="button">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navContent">
+    <ul class="navbar-nav mr-auto"></ul>
+    <ul class="navbar-nav">
+      <%= nav_link(@conn, "Home", to: "/") %>
+    </ul>
+  </div>
+</nav>
